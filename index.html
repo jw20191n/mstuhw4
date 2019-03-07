@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <title>Two Pets</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!-- place the custom tag anywhere inside the body -->
+  <div class="container">
+    <pet1></pet1>
+    <pet2></pet2>
+  </div>
+
+  <talk-app></talk-app>
+
+  <script type="riot/tag" src="tags/pet1.tag"></script>
+  <script type="riot/tag" src="tags/pet2.tag"></script>
+  <script type="riot/tag" src="tags/talk-app.tag"></script>
+  <script src="tags/talk-editor.tag" type="riot/tag"></script>
+  <script src="tags/talk-item.tag" type="riot/tag"></script>
+  <!-- include riot.js -->
+  <script src="https://cdn.jsdelivr.net/npm/riot@3.8/riot+compiler.min.js"></script>
+  <!-- mount the tag -->
+  <script>
+  // Making the observable object accessible to all tags here.
+    var observable = riot.observable();
+    riot.mount('*');
+  </script>
+
+  <style>
+    .container {
+      /* background: aqua; */
+      margin: auto;
+      padding: 10px;
+    }
+
+    pet1 {
+      width: 50%;
+      /* background: red; */
+      float: left;
+      display: inline-block;
+    }
+
+    pet2 {
+      width: 45%
+      /* margin-left: 15%; */
+      /* background: black; */
+    }
+
+    body {
+      text-align: center;
+    }
+  </style>
+</body>
+
+</html>
